@@ -43,13 +43,25 @@ int main()
   {
     std::cout << "Project in Data Structures and Algorithm (MCS 201)" << std::endl;
     std::cout << "\n\tMAIN MENU:" << std::endl;
-    std::cout << "\n\t[1] LOG IN" << std::endl;
-    std::cout << "\n\t[2] SIGN UP" << std::endl;
+    std::cout << "\n\t[1] LOG IN FOR STUDENTS" << std::endl;
+    std::cout << "\n\t[2] LOG IN FOR DEVELOPERS" << std::endl;
     std::cout << "\n\t[3] ABOUT THE DEVELOPERS" << std::endl;
     std::cout << "\n\t[4] EXIT" << std::endl;
-    // cin var; or getline(cin, var);
+    std::cout << "\n\tChoice: ";
+    std::cin >> choice;
 
-    password();
+    switch(choice)
+    {
+      case 1:
+        password();
+        break;
+      case 2:
+        break;
+      case 3:
+        break;
+      case 4:
+        exit(0);
+    }
   }
   return 0;
 };
