@@ -290,9 +290,21 @@ int main()
     std::cout << "\n\t[2] SIGN UP" << std::endl;
     std::cout << "\n\t[3] ABOUT THE DEVELOPERS" << std::endl;
     std::cout << "\n\t[4] EXIT" << std::endl;
-    // cin var; or getline(cin, var);
+    std::cout << "\n\tChoice: ";
+    std::cin >> choice;
 
-    password();
+    switch(choice)
+    {
+      case 1:
+        password();
+        break;
+      case 2:
+        break;
+      case 3:
+        break;
+      case 4:
+        exit(0);
+    }
   }
   return 0;
 };
