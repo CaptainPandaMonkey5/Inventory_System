@@ -3,15 +3,15 @@
 // true OK, false bad
 bool addUser(Users& users)
 {
-	std::string id;
+	string id;
 
 	if (const auto itr {getUser(users, id)}; itr != users.end()) {
-		std::cout << "Id already exists.\n";
+		cout << "Id already exists.\n";
 	} else {
 		UserData data;
 
-		std::cout << "Enter name: ";
-		std::getline(std::cin, data.name);
+		cout << "Enter name: ";
+		getline(cin, data.name);
 
 		if (const auto pass {getPass(data)}; !pass.empty()) {
 			data.curpass = pass;

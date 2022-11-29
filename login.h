@@ -4,10 +4,10 @@
 bool login(const Users& users)
 {
 	const auto itr {getUser(const_cast<Users&>(users))};
-	std::string pass;
+	string pass;
 
-	std::cout << "Password: ";
-	std::getline(std::cin, pass);
+	cout << "Password: ";
+	getline(cin, pass);
 
 	if (itr != users.end())
 		if (itr->second.curpass == pass)

@@ -8,18 +8,20 @@
 #include <limits>
 #include <stdlib.h>
 
+using namespace std;
+
 struct UserData {
-	std::string name;
-	std::string curpass;
-	std::set<std::string> prevpass;
+	string name;
+	string curpass;
+	set<string> prevpass;
 };
 
-using Users = std::map<std::string, UserData>;
+using Users = map<string, UserData>;
 
 enum Passerr {OK, UPPER, LOWER, LENGTH, DUPLICATE, LAST};
 
-const std::string PassErrs[LAST] {"", "Insufficient upper case chars", "Insufficient lower case chars", "Not enough chars", "Duplicate"};
-const std::string userfile {"users.txt"};
+const string PassErrs[LAST] {"", "Insufficient upper case chars", "Insufficient lower case chars", "Not enough chars", "Duplicate"};
+const string userfile {"users.txt"};
 
 // Format of file is
 #include "getInt.h"
@@ -41,14 +43,14 @@ int main()
 
   while(1)
   {
-    std::cout << "Project in Data Structures and Algorithm (MCS 201)" << std::endl;
-    std::cout << "\n\tMAIN MENU:" << std::endl;
-    std::cout << "\n\t[1] LOG IN FOR STUDENTS" << std::endl;
-    std::cout << "\n\t[2] LOG IN FOR DEVELOPERS" << std::endl;
-    std::cout << "\n\t[3] ABOUT THE DEVELOPERS" << std::endl;
-    std::cout << "\n\t[4] EXIT" << std::endl;
-    std::cout << "\n\tChoice: ";
-    std::cin >> choice;
+    cout << "Project in Data Structures and Algorithm (MCS 201)" << endl;
+    cout << "\n\tMAIN MENU:" << endl;
+    cout << "\n\t[1] LOG IN FOR STUDENTS" << endl;
+    cout << "\n\t[2] LOG IN FOR DEVELOPERS" << endl;
+    cout << "\n\t[3] ABOUT THE DEVELOPERS" << endl;
+    cout << "\n\t[4] EXIT" << endl;
+    cout << "\n\tChoice: ";
+    cin >> choice;
 
     switch(choice)
     {

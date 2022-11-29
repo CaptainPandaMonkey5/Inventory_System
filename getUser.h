@@ -1,16 +1,16 @@
 #pragma once
 
-auto getUser(Users& users, std::string& id)
+auto getUser(Users& users, string& id)
 {
-	std::cout << "\nEnter userid: ";
-	std::getline(std::cin, id);
+	cout << "\nEnter userid: ";
+	getline(cin, id);
 
 	return users.find(id);
 }
 
 auto getUser(Users& users)
 {
-	std::string id;
+	string id;
 
 	return getUser(users, id);
 }

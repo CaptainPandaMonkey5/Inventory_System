@@ -3,7 +3,7 @@
 // true OK, false bad
 bool writeUsers(const Users& users)
 {
-	std::ofstream ofs(userfile);
+	ofstream ofs(userfile);
 
 	if (!ofs)
 		return false;

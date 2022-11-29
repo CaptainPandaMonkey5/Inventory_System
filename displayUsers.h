@@ -2,17 +2,17 @@
 
 void displayUsers(const Users& users)
 {
-	std::cout << '\n' << std::right << std::setw(24) << "USER" << std::setw(16) << "PASS\n";
-	std::cout << std::left << std::setw(20) << "NAME" << std::setw(15) << "NAME" << std::setw(10) << "WORD" << " PREVIOUS PASSWORDS\n";
-	std::cout << std::setw(75) << std::setfill('-') << '-' << std::setfill(' ') << '\n';
+	cout << '\n' << right << setw(24) << "USER" << setw(16) << "PASS\n";
+	cout << left << setw(20) << "NAME" << setw(15) << "NAME" << setw(10) << "WORD" << " PREVIOUS PASSWORDS\n";
+	cout << setw(75) << setfill('-') << '-' << setfill(' ') << '\n';
 
 	for (const auto& user : users) {
-		std::cout << std::setw(20) << user.second.name << std::setw(15) << user.first << std::setw(10) << user.second.curpass;
+		cout << setw(20) << user.second.name << setw(15) << user.first << setw(10) << user.second.curpass;
 		for (const auto& old : user.second.prevpass)
-			std::cout << " " << old;
+			cout << " " << old;
 
-		std::cout << '\n';
+		cout << '\n';
 	}
 
-	std::cout << '\n';
+	cout << '\n';
 }

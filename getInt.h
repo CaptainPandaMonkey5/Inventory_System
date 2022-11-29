@@ -2,16 +2,16 @@
 
 
 //userid,name,curpass,oldpass,...
-int getInt(const std::string& prm)
+int getInt(const string& prm)
 {
 	int i {};
 
-	while ((std::cout << prm) && (!(std::cin >> i) || std::cin.peek() != '\n')) {
-		std::cout << "Not an integer\n";
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	while ((cout << prm) && (!(cin >> i) || cin.peek() != '\n')) {
+		cout << "Not an integer\n";
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	}
 
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	return i;
 }

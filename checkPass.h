@@ -1,7 +1,7 @@
 #pragma once
 
 //true OK, false bad
-Passerr checkPass(const UserData& user, const std::string& pass)
+Passerr checkPass(const UserData& user, const string& pass)
 {
 	// INCLUDE HERE OTHER REQUIRED TESTS FOR VALID PASSWORD
 
