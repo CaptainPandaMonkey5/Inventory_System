@@ -3,7 +3,7 @@
 // true OK, false bad
 bool readUsers(Users& users)
 {
-	std::ifstream ifs(userfile);
+	ifstream ifs(userfile);
 
 	if (!ifs)
 		return false;
