@@ -36,7 +36,9 @@ const string userfile {"users.txt"};
 #include "login.h" // password input - student
 #include "displayUsers.h" // list of users - dev TODO: change password output to ****** <- 
 #include "deleteUsers.h" // algorithm - dev
-#include "password.h" // UI - student && dev TODO: separate the ones for the dev and student
+#include "dev_interface/password.h" // UI - student && dev TODO: separate the ones for the dev and student
+
+// create password_student and
 
 int main()
 {
