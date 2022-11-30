@@ -2,6 +2,7 @@
 
 void displayUsers(const Users& users)
 {
+	system("cls");
 	cout << '\n' << right << setw(24) << "USER" << setw(16) << "PASS\n";
 	cout << left << setw(20) << "NAME" << setw(15) << "NAME" << setw(10) << "WORD" << " PREVIOUS PASSWORDS\n";
 	cout << setw(75) << setfill('-') << '-' << setfill(' ') << '\n';

@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <limits>
 #include <stdlib.h>
+#include <conio.h>
 
 using namespace std;
 
@@ -20,7 +21,7 @@ using Users = map<string, UserData>;
 
 enum Passerr {OK, UPPER, LOWER, LENGTH, DUPLICATE, LAST};
 
-const string PassErrs[LAST] {"", "Insufficient upper case chars", "Insufficient lower case chars", "Not enough chars", "Duplicate"};
+const string PassErrs[LAST] {"", "Insufficient upper case chars", "Insufficient lower case chars", "Not enough characters", "Duplicate"};
 const string userfile {"users.txt"};
 
 // Format of file is
@@ -63,8 +64,19 @@ int main()
       case 3:
         break;
       case 4:
+        cout << endl;
+        cout << "THANK YOU FOR USING OUR SOFTWARE" << endl;
+        cout << endl;
         exit(0);
+        break;
+      default:
+        cout << "\n\t YOU ENTERED THE WRONG CHOICE..." << endl;
+        cout << "\n\t PRESS ANY KEY TO TRY AGAIN" << endl;
+        cout << "-----------------------------------------------" << endl;
+        getch();
+        break;
     }
+    system("cls");
   }
   return 0;
 };

@@ -3,6 +3,7 @@
 // true OK, false bad
 bool changePass(Users& users)
 {
+	system("cls");
 	if (const auto iditr {getUser(users)}; iditr == users.end()) {
 		cout << "Id does not exist\n";
 	} else {

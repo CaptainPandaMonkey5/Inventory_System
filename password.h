@@ -1,6 +1,8 @@
 #pragma once
 
-int password() {
+int password() 
+{
+	system("cls");
 	Users users;
 	unsigned opt {};
 
@@ -8,12 +10,12 @@ int password() {
 		cout << "Problem reading users\n";
 
 	do {
-		cout << "\n1. Login\n";
-		cout << "2. Change password\n";
-		cout << "\n3. Add user\n";
-		cout << "4. Delete user\n";
-		cout << "5. Display all users\n";
-		cout << "0. Exit\n";
+		cout << "\n\t[1] LOGIN" << endl;
+		cout << "\n\t[2] CHANGE PASSWORD" << endl;
+		cout << "\n\t[3] SIGN UP" << endl;
+		cout << "\n\t[4] DELETE USER" << endl;
+		cout << "\n\t[5] DISPLAY ALL USERS" << endl;
+		cout << "\n\t[0] EXIT" << endl;
 
 		switch (opt = getInt("\nEnter options: ")) {
 			case 3:
@@ -33,7 +35,6 @@ int password() {
 					cout << "OK\n";
 				else
 					cout << "Invalid\n";
-
 				break;
 
 			case 5:

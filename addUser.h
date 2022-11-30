@@ -3,6 +3,8 @@
 // true OK, false bad
 bool addUser(Users& users)
 {
+	system("cls");
+	
 	string id;
 
 	if (const auto itr {getUser(users, id)}; itr != users.end()) {

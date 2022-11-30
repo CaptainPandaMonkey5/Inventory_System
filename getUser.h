@@ -2,6 +2,7 @@
 
 auto getUser(Users& users, string& id)
 {
+	system("cls");
 	cout << "\nEnter userid: ";
 	getline(cin, id);
 

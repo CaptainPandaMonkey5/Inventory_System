@@ -4,6 +4,7 @@
 // true OK, false bad
 bool deleteUser(Users& users)
 {
+	system("cls");
 	if (const auto iditr {getUser(users)}; iditr == users.end()) {
 		cout << "Id does not exist\n";
 		return false;
