@@ -26,6 +26,8 @@ const string userfile {"users.txt"};
 
 // Format of file is
 #include "UI/getInt.h"
+#include "UI/login.h"
+
 #include "UI/student_interface/readUser.h"
 #include "UI/student_interface/writeUser.h"
 #include "UI/student_interface/checkPass.h"
@@ -33,7 +35,7 @@ const string userfile {"users.txt"};
 #include "UI/student_interface/getPass.h"
 #include "UI/student_interface/addUser.h"
 #include "UI/student_interface/changePass.h"
-#include "UI/login.h" // password input - student
+
 #include "UI/dev_interface/displayUsers.h" // list of users - dev TODO: change password output to ****** <- 
 #include "UI/dev_interface/deleteUsers.h"
 #include "UI/dev_interface/password.h" // UI - student && dev TODO: separate the ones for the dev and student
