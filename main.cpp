@@ -25,20 +25,20 @@ const string PassErrs[LAST] {"", "Insufficient upper case chars", "Insufficient 
 const string userfile {"users.txt"};
 
 // Format of file is
-#include "getInt.h" // user input of choice - dev
-#include "readUser.h" // password - dev
-#include "writeUser.h" // password - dev
-#include "checkPass.h" // password checking - dev
-#include "getUser.h" // username - student
-#include "getPass.h" // password storing - dev
-#include "addUser.h" // sign up - student
-#include "changePass.h" // password changer algo? - dev
+#include "getInt.h"
+#include "student_interface/readUser.h"
+#include "student_interface/writeUser.h"
+#include "student_interface/checkPass.h"
+#include "student_interface/getUser.h"
+#include "student_interface/getPass.h"
+#include "student_interface/addUser.h"
+#include "student_interface/changePass.h"
 #include "login.h" // password input - student
-#include "displayUsers.h" // list of users - dev TODO: change password output to ****** <- 
-#include "deleteUsers.h" // algorithm - dev
+#include "dev_interface/displayUsers.h" // list of users - dev TODO: change password output to ****** <- 
+#include "dev_interface/deleteUsers.h"
 #include "dev_interface/password.h" // UI - student && dev TODO: separate the ones for the dev and student
 
-// create password_student and
+// create password_student and password_dev ??
 
 int main()
 {
