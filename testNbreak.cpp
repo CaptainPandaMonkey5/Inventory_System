@@ -233,7 +233,6 @@ bool deleteUser(Users& users)
 
 void devLogin(const Users& users)
 {
-    system("cls");
 	string usermain;
     string devPassword;
     int login_Attempt = 0;
@@ -248,8 +247,35 @@ void devLogin(const Users& users)
 
         if (usermain == "group0" && devPassword == "group01")
         {
-            // log dev in
-            break;
+			system("cls");
+			Users users;
+			unsigned opt {};
+
+			if (!readUsers(users))
+				cout << "PROBLEM READING USERS\n";
+
+			cout << "\n\tWelcome Developer" << endl;
+			do
+			{
+				cout << "\n\t[1] DELETE USER" << endl;
+				cout << "\n\t[2] DISPLAY ALL USERS" << endl;
+				cout << "\n\t[3] EXIT PROGRAM" << endl;
+				
+				switch(opt = getInt("\nENTER CHOICE: "))
+				{
+					case 1:
+						deleteUser(users);
+						break;
+					case 2:
+						displayUsers(users);
+						break;
+					case 3:
+						exit(0);
+						break;
+					default:
+						cout << "Invalid Option" << endl;
+				}
+			}while (opt);
         }
         else
         {
@@ -276,9 +302,7 @@ int password() {
 		cout << "\n\t[1] LOGIN" << endl;
 		cout << "\n\t[2] CHANGE PASSWORD" << endl;
 		cout << "\n\t[3] SIGN UP" << endl;
-		cout << "\n\t[4] DELETE USER" << endl;
-		cout << "\n\t[5] DISPLAY ALL USERS" << endl;
-		cout << "\n\t[6] ATTEMPTED DEV ADD ON" << endl;
+		cout << "\n\t[4] LOG IN FOR DEVELOPERS" << endl;
 		cout << "\n\t[0] EXIT" << endl;
 
 
@@ -286,11 +310,6 @@ int password() {
 			case 3:
 				addUser(users);
 				break;
-
-			case 4:
-				devLogin(users);
-				break;
-
 			case 2:
 				changePass(users);
 				break;
@@ -300,28 +319,27 @@ int password() {
 					cout << "OK\n";
 				else
 					cout << "Invalid\n";
-
 				break;
-
-			case 5:
-				displayUsers(users);
-				break;
-
-      case 6:
-        devLogin(users);
-        break;
-
+      		case 4:
+        		devLogin(users);
+        		break;
 			case 0:
 				if (!writeUsers(users))
 					cout << "Problem writing users\n";
-
 				break;
-
 			default:
 				cout << "Invalid option\n";
 		}
 	} while (opt);
 };
+
+void devInfo()
+{
+	system("cls");
+	cout << "ABOUT THE DEVELOPERS" << endl;
+	cout << "PRESS ANY KEY TO EXIT" << endl;
+	getch();
+}
 
 int main()
 {
@@ -332,8 +350,8 @@ int main()
     cout << "Project in Data Structures and Algorithm (MCS 201)" << endl;
     cout << "\n\tMAIN MENU:" << endl;
     cout << "\n\t[1] LOG IN" << endl;
-    cout << "\n\t[3] ABOUT THE DEVELOPERS" << endl;
-    cout << "\n\t[4] EXIT" << endl;
+    cout << "\n\t[2] ABOUT THE DEVELOPERS" << endl;
+    cout << "\n\t[3] EXIT" << endl;
     cout << "\n\tChoice: ";
     cin >> choice;
 
@@ -343,11 +361,13 @@ int main()
         password();
         break;
       case 2:
+		devInfo();
         break;
       case 3:
+	  	exit(0);
         break;
-      case 4:
-        exit(0);
+      default:
+	  	break;
     }
   }
   return 0;
