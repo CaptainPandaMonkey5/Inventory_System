@@ -92,7 +92,6 @@ bool writeUsers(const Users& users)
 	return true;
 }
 
-//true OK, false bad
 Passerr checkPass(const UserData& user, const string& pass)
 {
 	// INCLUDE HERE OTHER REQUIRED TESTS FOR VALID PASSWORD
@@ -147,7 +146,6 @@ string getPass(const UserData& data)
 	return pass;
 }
 
-// true OK, false bad
 bool addUser(Users& users)
 {
 	string id;
@@ -170,7 +168,6 @@ bool addUser(Users& users)
 	return false;
 }
 
-// true OK, false bad
 bool changePass(Users& users)
 {
 	if (const auto iditr {getUser(users)}; iditr == users.end()) {
@@ -186,7 +183,7 @@ bool changePass(Users& users)
 	return false;
 }
 
-// true OK, false bad
+// log in for students
 bool login(const Users& users)
 {
 	const auto itr {getUser(const_cast<Users&>(users))};
@@ -219,7 +216,6 @@ void displayUsers(const Users& users)
 	cout << '\n';
 }
 
-// true OK, false bad
 bool deleteUser(Users& users)
 {
 	if (const auto iditr {getUser(users)}; iditr == users.end()) {
@@ -231,6 +227,7 @@ bool deleteUser(Users& users)
 	return true;
 }
 
+// log in for developers algorithm
 void devLogin(const Users& users)
 {
 	string usermain;
@@ -254,6 +251,7 @@ void devLogin(const Users& users)
 			if (!readUsers(users))
 				cout << "PROBLEM READING USERS\n";
 
+			// main part
 			cout << "\n\tWelcome Developer" << endl;
 			do
 			{
@@ -333,6 +331,7 @@ int password() {
 	} while (opt);
 };
 
+// choice 2 information
 void devInfo()
 {
 	system("cls");
