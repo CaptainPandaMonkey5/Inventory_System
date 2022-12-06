@@ -298,25 +298,24 @@ int password() {
 
 	do {
 		cout << "\n\t[1] LOGIN" << endl;
-		cout << "\n\t[2] CHANGE PASSWORD" << endl;
-		cout << "\n\t[3] SIGN UP" << endl;
+		cout << "\n\t[2] SIGN UP" << endl;
+		cout << "\n\t[3] CHANGE PASSWORD" << endl;
 		cout << "\n\t[4] LOG IN FOR DEVELOPERS" << endl;
 		cout << "\n\t[0] EXIT" << endl;
 
 
 		switch (opt = getInt("\nEnter options: ")) {
-			case 3:
-				addUser(users);
-				break;
-			case 2:
-				changePass(users);
-				break;
-
 			case 1:
 				if (login(users))
 					cout << "OK\n";
 				else
 					cout << "Invalid\n";
+				break;
+			case 2:
+				addUser(users);
+				break;
+			case 3:
+				changePass(users);
 				break;
       		case 4:
         		devLogin(users);
