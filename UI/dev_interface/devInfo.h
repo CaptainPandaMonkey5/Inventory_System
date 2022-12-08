@@ -8,6 +8,7 @@ void devInfo()
 {
     system("cls");
     cout << "ABOUT THE DEVELOPERS AND DEVELOPER STATUS" << endl;
+    cout << "PRESENTED BY:" << endl;
     cout << "\n\tNeil Allen H. San Diego";
     cout << "\n\tBSM CS 2A";
     cout << "\n\t ";
@@ -51,10 +52,13 @@ void devInfo()
     cout << endl;
     cout << "\n\tTASK ";
     cout << "\n\thotdog";
-    
-    cout << endl;
-    cout << endl;
 
+    cout << endl;
+    cout << endl;
+    cout << "PRESENTED TO: " << endl;
+    cout << "\n\tENGR: EVELYN C. SAMSON";
+    cout << "\n\tINSTRUCTOR" << endl; 
+    cout << endl;
     cout << "PRESS ANY KEY TO RETURN" << endl;
     getch();
 };
