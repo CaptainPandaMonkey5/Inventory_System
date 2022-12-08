@@ -50,9 +50,8 @@ int main()
     cout << "Project in Data Structures and Algorithm (MCS 201)" << endl;
     cout << "\n\tMAIN MENU:" << endl;
     cout << "\n\t[1] LOG IN" << endl;
-    cout << "\n\t[2] STATUS OF THE DEVELOPER" << endl;
-    cout << "\n\t[3] ABOUT THE DEVELOPERS" << endl;
-    cout << "\n\t[4] EXIT" << endl;
+    cout << "\n\t[2] ABOUT THE DEVELOPERS" << endl;
+    cout << "\n\t[3] EXIT" << endl;
     cout << "\n\tChoice: ";
     cin >> choice;
 
@@ -62,11 +61,9 @@ int main()
         password();
         break;
       case 2:
-        break;
-      case 3:
         devInfo();
         break;
-      case 4:
+      case 3:
         cout << endl;
         cout << "THANK YOU FOR USING OUR SOFTWARE" << endl;
         cout << endl;
@@ -79,6 +76,7 @@ int main()
         getch();
         break;
     }
+    system("cls");
   }
   return 0;
 };
