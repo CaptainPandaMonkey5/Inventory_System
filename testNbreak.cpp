@@ -291,12 +291,14 @@ void devLogin(const Users& users)
 int password() {
 	system("cls");
 	Users users;
+	UserData user;
 	unsigned opt {};
 
 	if (!readUsers(users))
 		cout << "Problem reading users\n";
 
 	do {
+		cout << "Hello, " << user.name;
 		cout << "\n\t[1] LOGIN" << endl;
 		cout << "\n\t[2] SIGN UP" << endl;
 		cout << "\n\t[3] CHANGE PASSWORD" << endl;
@@ -348,8 +350,9 @@ int main()
     cout << "Project in Data Structures and Algorithm (MCS 201)" << endl;
     cout << "\n\tMAIN MENU:" << endl;
     cout << "\n\t[1] LOG IN" << endl;
-    cout << "\n\t[2] ABOUT THE DEVELOPERS" << endl;
-    cout << "\n\t[3] EXIT" << endl;
+	cout << "\n\t[2] STATUS OF THE DEVELOPER" << endl;
+    cout << "\n\t[3] ABOUT THE DEVELOPERS" << endl;
+    cout << "\n\t[4] EXIT" << endl;
     cout << "\n\tChoice: ";
     cin >> choice;
 
