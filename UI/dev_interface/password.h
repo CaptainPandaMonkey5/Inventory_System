@@ -82,9 +82,26 @@ int password() {
 			{
 				if (login(users))
 					cout << "OK\n";
-				else
-					cout << "Invalid\n";
-					attemptCount++;
+				else if (attemptCount == 0)
+				{
+					cout << "Incorrect username/password combination. Please try again." << endl;
+					cout << "ONE OUT OF THREE TRIES." << endl;
+				}
+				else if (attemptCount == 1)
+				{
+					cout << "Incorrect username/password combination. Please try again." << endl;
+					cout << "TWO OUT OF THREE TRIES." << endl;
+				}
+				else if (attemptCount == 2)
+				{
+					cout << endl;
+					cout << "TERMINATING PROGRAM" << endl;
+					cout << "PRESS ANY KEY TO EXIT" << endl;
+					getch();
+					exit(0);
+				}
+
+				attemptCount++;
 			}
 			break;
 			case 2:
