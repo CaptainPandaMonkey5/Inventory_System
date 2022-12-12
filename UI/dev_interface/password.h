@@ -137,7 +137,7 @@ int password()
     string devPassword;
     int login_Attempt = 0;
     int choiceDo, age, studentNum, choiceEdit, choiceRet, yearLevel, arrSize;
-    string nameHOLDER, genderHOLDER, phoneHOLDER, emailHOLDER;
+    string nameHOLDER, genderHOLDER, phoneHOLDER, emailHOLDER, usernameHOLDER, passHolder;
     int ageHOLDER, studentHOLDER;
     int main, secondary;
     string pass, username1, pass1;
@@ -164,7 +164,7 @@ int password()
                 cout << "              Welcome to Books R Us!" << endl << endl;
                 cout << " SIGN IN" << endl << endl;
                 cout << " Username: ";
-                cin >> username1;
+                cin >> username;
                 cout << " Password: ";
                 cin >> pass;
                 cout << endl;
@@ -210,6 +210,12 @@ int password()
                         }
                         system("pause");
                         system("cls");
+                            string *num = new string[arrSize];
+
+    inputData(arrSize, num);
+    cout << "------------------------------------------------------" << endl;
+    display(arrSize, num);
+    cout << "------------------------------------------------------" << endl;
                     }
                     }
 			break;
@@ -244,6 +250,10 @@ int password()
             cin >> email;
             cout << " Student No. : ";
             cin >> studentNum;
+            cout << " Username: ";
+            cin >> username;
+            cout << " Password: ";
+            cin >> pass;
 
             cout << "--------------------------------------------------" << endl;
             cout << " Name : " << name << endl;
@@ -252,6 +262,8 @@ int password()
             cout << " Phone No. : " << phoneNum << endl;
             cout << " Email Address : " << email << endl;
             cout << " Student No. : " << studentNum << endl;
+            cout << " Username:" << username << endl;
+            cout << " Password:" << pass << endl; 
             break;
             case 2:
             nameHOLDER = name;
@@ -260,6 +272,8 @@ int password()
             emailHOLDER = email;
             ageHOLDER = age;
             studentHOLDER = studentNum;
+            usernameHOLDER = username;
+            passHolder = pass;
             system("cls");
             cout << "--------------------------------------------------" << endl;
             cout << "               Customer Information" << endl;
@@ -270,6 +284,8 @@ int password()
             cout << " [4] Phone No." << endl;
             cout << " [5] Email Address" << endl;
             cout << " [6] Student No." << endl;
+            cout << " [7] Username" << endl;
+            cout << " [8] Password" << endl;
             cout << "\n What would you like to edit? : ";
             cin >> choiceEdit;
 
@@ -345,7 +361,38 @@ int password()
                 cout << " Phone No. : " << phoneNum << endl;
                 cout << " Email Address : " << email << endl;
                 cout << " Student No. : " << studentNum << endl;
-            } else {
+            }
+            else if (choiceEdit == 7) {
+             system("cls");
+                cout << "\n Student No. : ";
+                cin >> username;
+
+                cout << "--------------------------------------------------" << endl;
+                cout << " Name : " << name << endl;
+                cout << " Gender : " << gender << endl;
+                cout << " Age : " << age << endl;
+                cout << " Phone No. : " << phoneNum << endl;
+                cout << " Email Address : " << email << endl;
+                cout << " Student No. : " << studentNum << endl;
+                cout << " Username: " << username << endl;
+                cout << " Password: " << pass << endl;
+            } 
+            else if (choiceEdit == 8) {
+                system("cls");
+                cout << "\n Student No. : ";
+                cin >> pass;
+
+                cout << "--------------------------------------------------" << endl;
+                cout << " Name : " << name << endl;
+                cout << " Gender : " << gender << endl;
+                cout << " Age : " << age << endl;
+                cout << " Phone No. : " << phoneNum << endl;
+                cout << " Email Address : " << email << endl;
+                cout << " Student No. : " << studentNum << endl;
+                cout << " Username: " << username << endl;
+                cout << " Password: " << pass << endl;
+            }
+            else {
                 cout << "\n Invalid input!" << endl;
             }
             break;
@@ -356,12 +403,16 @@ int password()
             emailHOLDER = email;
             ageHOLDER = age;
             studentHOLDER = studentNum;
+            usernameHOLDER = username;
+            passHolder = pass;
             name.clear();
             gender.clear();
             age = -1;
             phoneNum.clear();
             email.clear();
             studentNum = -1;
+            username.clear();
+            pass.clear();
             cout << "\n Data cleared successfully! " << endl;
             break;
             case 4:
